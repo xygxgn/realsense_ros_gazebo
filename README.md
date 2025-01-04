@@ -66,3 +66,25 @@ Intel Realsense Tracking and Depth camera simulations and URDF macros.
 * /camera/**depth**/*
 * /camera/**infra1**/*
 * /camera/**infra2**/*
+
+
+
+## RealSense D435i
+
+### Usage ###
+
+```xml
+    <xacro:include filename="$(find realsense_ros_gazebo)/xacro/realsense_d435i.xacro"/>
+
+<xacro:realsense_d435i sensor_name="camera" parent_link="base_link" rate="10">
+    <origin rpy="0 0 0 " xyz="0 0 0.5"/>
+</xacro:realsense_d435i>
+```
+
+### Publishers ###
+
+* /camera/**color**/*
+* /camera/**depth**/*
+* /camera/**infra1**/*
+* /camera/**infra2**/*
+* /camera/**imu**/*
