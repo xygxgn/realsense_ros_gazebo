@@ -166,7 +166,8 @@
           <noise>
             <type>gaussian</type>
             <mean>0.0</mean>
-            <stddev>0.05</stddev>
+            <!-- <stddev>0.05</stddev> -->
+            <stddev>0.007</stddev>
           </noise>
         </camera>
         <always_on>1</always_on>
@@ -190,7 +191,8 @@
           <noise>
             <type>gaussian</type>
             <mean>0.0</mean>
-            <stddev>0.05</stddev>
+            <!-- <stddev>0.05</stddev> -->
+            <stddev>0.007</stddev>
           </noise>
         </camera>
         <always_on>1</always_on>
