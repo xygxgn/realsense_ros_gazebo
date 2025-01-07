@@ -1,14 +1,14 @@
 <launch>
 
   <!-- Model setup -->
-  <arg name="model" default="$(find realsense_ros_gazebo)/urdf/test.xacro"/>
+  <arg name="model" default="$(find-pkg-share realsense_ros_gazebo)/urdf/test.xacro"/>
 
   <!-- spawn urdf model to gazebo -->
-  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+  <param name="robot_description" command="$(find-pkg-share xacro)/xacro $(var model)" />
   <node  name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" args="-z 1.0 -unpause -urdf -model test_model -param robot_description" respawn="false" output="screen" />
 
   <!-- simulator -->
-  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+  <include file="$(find-pkg-share gazebo_ros)/launch/empty_world.launch">
     <arg name="paused" value="true"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
