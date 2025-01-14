@@ -52,7 +52,7 @@ install(TARGETS realsense_gazebo_plugin
 # )
 
 install(
-  DIRECTORY launch meshes urdf xacro
+  DIRECTORY launch meshes sdf urdf xacro
   DESTINATION share/${PROJECT_NAME}
 )
 
